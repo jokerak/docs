@@ -111,6 +111,8 @@ PS:这样是为了保证IDE配置信息不会上传到Gitlab中, 也可以使用
 
 7.输入命令：git push origin master
   ---将代码推送至Gitlab端。
+8.fatal:拒绝合并无关的历史时，可以执行以下命令忽略版本不同造成的影响
+  $ git pull origin master --allow-unrelated-histories //将远程主机origin的master分支强行拉取到本地
 ```
 
 
