@@ -1,21 +1,19 @@
 ## Git
 
-
-Git是一款免费、开源的分布式版本控制系统，用于敏捷高效地处理任何或小或大的项目, [官网](https://git-scm.com/)
-
+  Git是一款免费、开源的分布式版本控制系统，用于敏捷高效地处理任何或小或大的项目, [官网](https://git-scm.com/)
 
 ### 使用准备
 
 - 安装
 
-Windows 下的安装包会自带一个 `gitbash`, 强制`gitbash + 命令` 的方式来使用 git
+  Windows 下的安装包会自带一个 `gitbash`, 强制`gitbash + 命令` 的方式来使用 git
 
 - 设置
 
 ```
-git config --global user.name "xxx"
-git config --global user.email "xxx@sensoro.com"
-git config --global core.editor vim
+  git config --global user.name "xxx"
+  git config --global user.email "xxx@sensoro.com"
+  git config --global core.editor vim
 
 ```
 
@@ -27,17 +25,10 @@ git config --global core.editor vim
 - 提示符修改(Mac 环境)
 
 ```
-if [ -f ~/.git-prompt.sh ];then
+  if [ -f ~/.git-prompt.sh ];then
     . ~/.git-prompt.sh
-fi
-export PS1='[vm \W$(__git_ps1 " (%s)")]\$ '
-
-```
-- 自动补全(Mac 环境)
-```
-if [ -f ~/.git-completion.bash ];then
-    . ~/.git-completion.bash
-fi
+  fi
+  export PS1='[vm \W$(__git_ps1 " (%s)")]\$ '
 
 ```
 ### **git的常用操作**
@@ -62,40 +53,40 @@ fi
 - 查看历史提交	
 
 ```c++
-$ git log
-commit 22eeb22de7c6d6f4659ed28c21cd8887fdccdcbb (HEAD -> test, origin/master, master)
+  $ git log
+  commit 22eeb22de7c6d6f4659ed28c21cd8887fdccdcbb (HEAD -> test, origin/master, master)
   Author: jokerak <1123315406@qq.com>
-Date:   Thu Oct 29 10:52:31 2020 +0800
-  rm
-commit 2dac3ab420d8b0a9b51cbef70acf08c0891d613d
+  Date:   Thu Oct 29 10:52:31 2020 +0800
+    rm
+  commit 2dac3ab420d8b0a9b51cbef70acf08c0891d613d
   Author: jokerak <1123315406@qq.com>
   Date:   Thu Oct 29 10:48:17 2020 +0800
-  整理 
+    整理 
 ```
 
 - 新建分支
  
- `git checkout -b <分支>`
+  `git checkout -b <分支>`
 
 - 本地回到某次提交的版本	
  
- `git checkout <commit ID>`
+  `git checkout <commit ID>`
 
 - 查看本地分支
  
- `git branch`
+  `git branch`
 
 - 切换分支
  
- `git checkout <分支>`
+  `git checkout <分支>`
 
 - 查看本地和远端分支
  
- `git branch -a`
+  `git branch -a`
 
 - 删除分支
  
- `git branch -d 分支名`
+  `git branch -d 分支名`
 
 ### 常用命令查询表格
 
@@ -139,83 +130,74 @@ commit 2dac3ab420d8b0a9b51cbef70acf08c0891d613d
 * 克隆, 将远程仓库复制到本地
 
 ```
-git clone git@gitlab.sensoro.com:Embedded/Embedded-Docs.git [-o gitlab]
+  git clone git@gitlab.sensoro.com:Embedded/Embedded-Docs.git [-o gitlab]
 
--o 选项为可选项
+  -o 选项为可选项
 ```
 
 * 拉取, 将远程仓库的更新同步到本地
 
 ```
-git pull origin master
+  git pull origin master
 ```
 
 * 推送, 将本地的更新同步到远程仓库
 
 ```
-git push oringin master
+  git push oringin master
 ```
 
 ### .gitignore
 
-屏蔽不想 track 的文件和路径
+  屏蔽不想 track 的文件和路径
 
 ```
-*.o
-build/
-
+  *.o
+  build/
 ```
 注意: 对于已 track 的文件或文件夹, .gitignore是不起作用的
-
 删除已 track 文件
-
 ```
-git rm --cached xxxx(文件)
-git rm -r --cached xxxx(文件夹)
-
+  git rm --cached xxxx(文件)
+  git rm -r --cached xxxx(文件夹)
 ```
-
 ### commit message
 
 * 格式
 
-
 ```
-<head>
-空行
-<body>
-空行
-<tail>
+  <head>
+  空行
+  <body>
+  空行
+  <tail>
 ```
-
-
 * 再次编辑 commit message
 
 ```
-git commit --amend
+  git commit --amend
 ```
-
 ### git checkout
 
 * 回滚到某次提交
 
 ```
-git checkout 6efcdacfb77a6e4df5571237b2ea6ebab063030c
+  git checkout 6efcdacfb77a6e4df5571237b2ea6ebab063030c
 
 ```
 
 * 回滚到某次操作
 
 ```
-git reflog
-git checkout ba1ff51
+  git reflog
+  git checkout ba1ff51
 
 ```
 
 * 回滚某个分支
 
 ```
-git checkout <tag>
+  git checkout <tag>
 
 ```
 
@@ -237,7 +219,7 @@ git checkout <tag>
 
 ## Git Bash
 
-Git Bash 是 window git 自带的 MSYS2 命令行终端. 算是 windows 下比较简约好用的终端
+  Git Bash 是 window git 自带的 MSYS2 命令行终端. 算是 windows 下比较简约好用的终端
 
 ### Add more to Git Bash
 
