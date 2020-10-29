@@ -33,79 +33,78 @@ fi
 export PS1='[vm \W$(__git_ps1 " (%s)")]\$ '
 
 ```
-### **git的常用命令**
-
-
-- 为本地仓库添加一个本地的server:
-'remote add origin /home/zjk/mygit/proj.git'
-
-- 将本地仓库的master新分支同步到origin:
-git push -u origin master
-
-- 添加远程主机	
-git remote add <主机名> <网址>
-'git remote add origin server:/flx/zjk/mysql++_example.git'
-
-- 推送本地新分支/首次推送	
-git push -u <远程主机名> <本地分支名>:<远程分支名>
-
-- 查看历史提交	
-'git log'
-(''')
-$ git log
-commit 22eeb22de7c6d6f4659ed28c21cd8887fdccdcbb (HEAD -> test, origin/master, master)
-Author: jokerak <1123315406@qq.com>
-Date:   Thu Oct 29 10:52:31 2020 +0800
-
-    rm
-
-commit 2dac3ab420d8b0a9b51cbef70acf08c0891d613d
-Author: jokerak <1123315406@qq.com>
-Date:   Thu Oct 29 10:48:17 2020 +0800
-(''')
-    整理
-
-- 新建分支
-	'git checkout -b <分支>'
-
-- 本地回到某次提交的版本	
-	'git checkout <commit ID>'
-
-- 查看本地分支
-	'git branch'
-
-- 切换分支
-	'git checkout <分支>'
-
-- 查看本地和远端分支
-	'git branch -a'
-
-- 删除分支
-	'git branch -d 分支名'
----
-- 自动补全(Mac 环境)
-
 ```
 if [ -f ~/.git-completion.bash ];then
     . ~/.git-completion.bash
 fi
 
 ```
+### **git的常用操作**
 
-### 常用命令
+- 为本地仓库添加一个本地的server
+
+  `remote add origin /home/zjk/mygit/proj.git` 
+
+- 将本地仓库的master新分支同步到origin
+  `git push -u origin master`
+
+- 添加远程主机	
+  `git remote add <主机名> <网址>`
+  `git remote add origin server:/flx/zjk/mysql++_example.git`
+
+- 推送本地新分支/首次推送	
+  git push -u <远程主机名> <本地分支名>:<远程分支名>
+
+- 查看历史提交	
+
+```c++
+$ git log
+commit 22eeb22de7c6d6f4659ed28c21cd8887fdccdcbb (HEAD -> test, origin/master, master)
+  Author: jokerak <1123315406@qq.com>
+Date:   Thu Oct 29 10:52:31 2020 +0800
+  rm
+commit 2dac3ab420d8b0a9b51cbef70acf08c0891d613d
+  Author: jokerak <1123315406@qq.com>
+  Date:   Thu Oct 29 10:48:17 2020 +0800
+    整理 
+```
+
+- 新建分支
+  `git checkout -b <分支>`
+
+- 本地回到某次提交的版本	
+  `git checkout <commit ID>`
+
+- 查看本地分支
+  `git branch`
+
+- 切换分支
+  git checkout <分支>
+
+- 查看本地和远端分支
+  `git branch -a`
+
+- 删除分支
+  `git branch -d 分支名`
+
+- 自动补全(Mac 环境)
+
+
+
+### 常用命令查询表格
 
 功能 | 命令
 -- | --
 新建仓库 | git init
 克隆仓库 | git clone <地址> [-o <主机名>]
-*添加远程主机 | git remote add <主机名> <网址>
-删除远程主机 | git remote rm <主机名>
-查看远程主机 | git remote -v
-推送本地分支 | git push <远程主机名> <本地分支名>:<远程分支名>
+*添加远程主机 \ git remote add <主机名> <网址>
+删除远程主机 \ git remote rm <主机名>
+查看远程主机 \ git remote -v
+推送本地分支 \ git push <远程主机名> <本地分支名>:<远程分支名>
 *推送本地新分支 | git push -u <远程主机名> <本地分支名>:<远程分支名>
 拉取分支 | git pull <远程主机名> <远程分支名>:<本地分支名>
 拉取分支 | git fetch <远程主机名> <远程分支名>:<本地分支名>
-*新建分支,切换远端分支 | git checkout -b <分支>
+*新建分支\ git checkout -b <分支>
 *切换分支 | git checkout <分支>
 合并分支 | git merge
 查看分支 | git branch
@@ -128,41 +127,7 @@ fi
 将每一个子模块切到 master 分支 |git submodule foreach git checkout master
 更新每一个子模块 | git submodule foreach git pull
 删除已经track的文件 | git rm --cached ***
-
-### 使用Git命令将本地项目上传至Gitlab上
-
-#### 安装git
-
-#### 在Gitlab上创建项目，如下图，点击右上角加号到项目创建页面, 填写项目名称, 选择项目访问权限, private为授权的组员才能访问.
-
-![](../../img/Gitlab新建项目.png)
-
-#### 打开本地项目源代码所在文件夹, 删除项目IDE配置信息
-PS:这样是为了保证IDE配置信息不会上传到Gitlab中, 也可以使用命令行在上传时将配置文件过滤, 个人觉得可视化删除方便些
-
-#### 鼠标右键打开gitbash here:
-
-```
-1.输入命令：git config --global user.name "xxxxxxxx"
-
-2.输入命令：git config --global user.email "xxxxxxxx@sensoro.com"
-
-3.输入命令：git init
-
-4.输入命令：git remote add origin xxxxxxxx
-  ---xxxxxxxx gitlabs上建立的项目的连接
-  eg.git remote add origin git@gitlab.sensoro.com:Embedded/Embedded-Docs.git
-
-5.输入命令：git add -A
-
-6.输入命令：git commit -am xxxx
-  ---xxxx 信息 可随意命名
-
-7.输入命令：git push origin master
-  ---将代码推送至Gitlab端。
-```
-
-
+---
 ### 远程仓库操作
 
 * 克隆, 将远程仓库复制到本地
