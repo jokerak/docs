@@ -13,7 +13,6 @@
   git config --global user.name "xxx"
   git config --global user.email "xxx@sensoro.com"
   git config --global core.editor vim
-
 ```
 - 远程托管平台添加公钥
     - `ssh-keygen`生成公私钥对
@@ -118,21 +117,16 @@
 更新每一个子模块 | git submodule foreach git pull
 删除已经track的文件 | git rm --cached ***
 ### 远程仓库操作
-
 * 克隆, 将远程仓库复制到本地
-```
-  git clone git@gitlab.sensoro.com:Embedded/Embedded-Docs.git [-o gitlab]
+  `git clone git@gitlab.sensoro.com:Embedded/Embedded-Docs.git [-o gitlab]`
+  `-o 选项为可选项`
 
-  -o 选项为可选项
-```
 * 拉取, 将远程仓库的更新同步到本地
-```
-  git pull origin master
-```
+  
+  `git pull origin master`
 * 推送, 将本地的更新同步到远程仓库
-```
-  git push oringin master
-```
+  
+  `git push oringin master`
 ### .gitignore
   屏蔽不想 track 的文件和路径
 ```
@@ -156,24 +150,22 @@
   <tail>
 ```
 * 再次编辑 commit message
-```
-  git commit --amend
-```
+  
+  `git commit --amend`
 ### git checkout
 
 * 回滚到某次提交
-```
-  git checkout 6efcdacfb77a6e4df5571237b2ea6ebab063030c
-```
+  
+  `git checkout 6efcdacfb77a6e4df5571237b2ea6ebab063030c`
 * 回滚到某次操作
 ```
   git reflog
   git checkout ba1ff51
 ```
 * 回滚某个分支
-```
-  git checkout <tag>
-```
+
+  `git checkout <tag>`
+
 ### submodule
 * git submodule update, 切换到对应版本
 
