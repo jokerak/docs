@@ -33,6 +33,7 @@ fi
 export PS1='[vm \W$(__git_ps1 " (%s)")]\$ '
 
 ```
+- 自动补全(Mac 环境)
 ```
 if [ -f ~/.git-completion.bash ];then
     . ~/.git-completion.bash
@@ -46,14 +47,17 @@ fi
   `remote add origin /home/zjk/mygit/proj.git` 
 
 - 将本地仓库的master新分支同步到origin
+ 
   `git push -u origin master`
 
 - 添加远程主机	
+ 
   `git remote add <主机名> <网址>`
   `git remote add origin server:/flx/zjk/mysql++_example.git`
 
 - 推送本地新分支/首次推送	
-  git push -u <远程主机名> <本地分支名>:<远程分支名>
+ 
+  `git push -u <远程主机名> <本地分支名>:<远程分支名>`
 
 - 查看历史提交	
 
@@ -66,30 +70,32 @@ Date:   Thu Oct 29 10:52:31 2020 +0800
 commit 2dac3ab420d8b0a9b51cbef70acf08c0891d613d
   Author: jokerak <1123315406@qq.com>
   Date:   Thu Oct 29 10:48:17 2020 +0800
-    整理 
+  整理 
 ```
 
 - 新建分支
-  `git checkout -b <分支>`
+ 
+ `git checkout -b <分支>`
 
 - 本地回到某次提交的版本	
-  `git checkout <commit ID>`
+ 
+ `git checkout <commit ID>`
 
 - 查看本地分支
-  `git branch`
+ 
+ `git branch`
 
 - 切换分支
-  git checkout <分支>
+ 
+ `git checkout <分支>`
 
 - 查看本地和远端分支
-  `git branch -a`
+ 
+ `git branch -a`
 
 - 删除分支
-  `git branch -d 分支名`
-
-- 自动补全(Mac 环境)
-
-
+ 
+ `git branch -d 分支名`
 
 ### 常用命令查询表格
 
@@ -97,14 +103,14 @@ commit 2dac3ab420d8b0a9b51cbef70acf08c0891d613d
 -- | --
 新建仓库 | git init
 克隆仓库 | git clone <地址> [-o <主机名>]
-*添加远程主机 \ git remote add <主机名> <网址>
-删除远程主机 \ git remote rm <主机名>
-查看远程主机 \ git remote -v
-推送本地分支 \ git push <远程主机名> <本地分支名>:<远程分支名>
+*添加远程主机 | git remote add <主机名> <网址>
+删除远程主机 | git remote rm <主机名>
+查看远程主机 | git remote -v
+推送本地分支 | git push <远程主机名> <本地分支名>:<远程分支名>
 *推送本地新分支 | git push -u <远程主机名> <本地分支名>:<远程分支名>
 拉取分支 | git pull <远程主机名> <远程分支名>:<本地分支名>
 拉取分支 | git fetch <远程主机名> <远程分支名>:<本地分支名>
-*新建分支\ git checkout -b <分支>
+*新建分支| git checkout -b <分支>
 *切换分支 | git checkout <分支>
 合并分支 | git merge
 查看分支 | git branch
