@@ -33,7 +33,56 @@ fi
 export PS1='[vm \W$(__git_ps1 " (%s)")]\$ '
 
 ```
+### **git的常用命令**
 
+
+- 为本地仓库添加一个本地的server:
+'remote add origin /home/zjk/mygit/proj.git'
+
+- 将本地仓库的master新分支同步到origin:
+git push -u origin master
+
+- 添加远程主机	
+git remote add <主机名> <网址>
+'git remote add origin server:/flx/zjk/mysql++_example.git'
+
+- 推送本地新分支/首次推送	
+git push -u <远程主机名> <本地分支名>:<远程分支名>
+
+- 查看历史提交	
+'git log'
+(''')
+$ git log
+commit 22eeb22de7c6d6f4659ed28c21cd8887fdccdcbb (HEAD -> test, origin/master, master)
+Author: jokerak <1123315406@qq.com>
+Date:   Thu Oct 29 10:52:31 2020 +0800
+
+    rm
+
+commit 2dac3ab420d8b0a9b51cbef70acf08c0891d613d
+Author: jokerak <1123315406@qq.com>
+Date:   Thu Oct 29 10:48:17 2020 +0800
+(''')
+    整理
+
+- 新建分支
+	'git checkout -b <分支>'
+
+- 本地回到某次提交的版本	
+	'git checkout <commit ID>'
+
+- 查看本地分支
+	'git branch'
+
+- 切换分支
+	'git checkout <分支>'
+
+- 查看本地和远端分支
+	'git branch -a'
+
+- 删除分支
+	'git branch -d 分支名'
+---
 - 自动补全(Mac 环境)
 
 ```
