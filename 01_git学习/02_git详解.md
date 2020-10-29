@@ -9,27 +9,22 @@
   Windows 下的安装包会自带一个 `gitbash`, 强制`gitbash + 命令` 的方式来使用 git
 
 - 设置
-
 ```
   git config --global user.name "xxx"
   git config --global user.email "xxx@sensoro.com"
   git config --global core.editor vim
 
 ```
-
 - 远程托管平台添加公钥
     - `ssh-keygen`生成公私钥对
     - 找到平台对应配置项, 添加公钥
 
-
 - 提示符修改(Mac 环境)
-
 ```
   if [ -f ~/.git-prompt.sh ];then
     . ~/.git-prompt.sh
   fi
   export PS1='[vm \W$(__git_ps1 " (%s)")]\$ '
-
 ```
 ### **git的常用操作**
 
@@ -51,7 +46,6 @@
   `git push -u <远程主机名> <本地分支名>:<远程分支名>`
 
 - 查看历史提交	
-
 ```c++
   $ git log
   commit 22eeb22de7c6d6f4659ed28c21cd8887fdccdcbb (HEAD -> test, origin/master, master)
@@ -63,7 +57,6 @@
   Date:   Thu Oct 29 10:48:17 2020 +0800
     整理 
 ```
-
 - 新建分支
  
   `git checkout -b <分支>`
@@ -124,39 +117,30 @@
 将每一个子模块切到 master 分支 |git submodule foreach git checkout master
 更新每一个子模块 | git submodule foreach git pull
 删除已经track的文件 | git rm --cached ***
----
 ### 远程仓库操作
 
 * 克隆, 将远程仓库复制到本地
-
 ```
   git clone git@gitlab.sensoro.com:Embedded/Embedded-Docs.git [-o gitlab]
 
   -o 选项为可选项
 ```
-
 * 拉取, 将远程仓库的更新同步到本地
-
 ```
   git pull origin master
 ```
-
 * 推送, 将本地的更新同步到远程仓库
-
 ```
   git push oringin master
 ```
-
 ### .gitignore
-
   屏蔽不想 track 的文件和路径
-
 ```
   *.o
   build/
 ```
-注意: 对于已 track 的文件或文件夹, .gitignore是不起作用的
-删除已 track 文件
+  注意: 对于已 track 的文件或文件夹, .gitignore是不起作用的
+  删除已 track 文件
 ```
   git rm --cached xxxx(文件)
   git rm -r --cached xxxx(文件夹)
@@ -164,7 +148,6 @@
 ### commit message
 
 * 格式
-
 ```
   <head>
   空行
@@ -173,38 +156,26 @@
   <tail>
 ```
 * 再次编辑 commit message
-
 ```
   git commit --amend
 ```
 ### git checkout
 
 * 回滚到某次提交
-
 ```
   git checkout 6efcdacfb77a6e4df5571237b2ea6ebab063030c
-
 ```
-
 * 回滚到某次操作
-
 ```
   git reflog
   git checkout ba1ff51
-
 ```
-
 * 回滚某个分支
-
 ```
   git checkout <tag>
-
 ```
-
 ### submodule
-
 * git submodule update, 切换到对应版本
-
 
 ### hooks
 
