@@ -1,8 +1,7 @@
 ### 概述
-
-  #### 必备知识，点滴记录。
-	- 学习是漫长的，进步是必然的
-	- onley the strong survive
+  #### 必备知识，点滴记录
+- 学习是漫长的，进步是必然的
+- onley the strong survive
 ---
 ### 目录
 
