@@ -33,8 +33,11 @@
     沿用www技术解决俩问题：1.寻址：采用什么样的地址形式标识终端用户。2.用户定位。  
     寻址采用SIP URL，按照RFC2396规定的导则定义其语法。     
     格式：SIP:用户名:口令@主机:端口;传递参数;用户参数;方法参数;生存期参数;服务器地址参数?头部名=头部值  
-        ```例如：Sip:55502200@127.0.0.1:5060;User=phone```   
-              ```Sip:alice@register.com;method=REGISTER```   *REGISTER方法是向SIP服务器进行注册的*     
+
+    ```例如：Sip:55502200@127.0.0.1:5060;User=phone```   
+    
+      ```Sip:alice@register.com;method=REGISTER  #REGISTER方法是向SIP服务器进行注册的```   
+
 
       > 用户名一般是电话号码，也可以是域名。  
       > 口令一般不加，因为别人看到不安全。  
