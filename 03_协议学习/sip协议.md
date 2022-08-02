@@ -36,7 +36,7 @@
 
     ```例如：Sip:55502200@127.0.0.1:5060;User=phone```   
     
-      ```Sip:alice@register.com;method=REGISTER  #REGISTER方法是向SIP服务器进行注册的```   
+    ```    Sip:alice@register.com;method=REGISTER  #REGISTER方法是向SIP服务器进行注册的```   
 
 
       > 用户名一般是电话号码，也可以是域名。  
