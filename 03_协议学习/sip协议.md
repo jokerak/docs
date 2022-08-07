@@ -29,14 +29,15 @@
   - 事务  
     SIP是一个客户/服务器协议。C/S之间的操作从一个请求开始到最终响应为止的所有消息构成一个SIP事务。  
     一个呼叫一般包含三个事务：invite、ACK、Bye。
-  - SIP URL
+  - SIP URL   
     沿用www技术解决俩问题：1.寻址：采用什么样的地址形式标识终端用户。2.用户定位。  
     寻址采用SIP URL，按照RFC2396规定的导则定义其语法。     
     格式：SIP:用户名:口令@主机:端口;传递参数;用户参数;方法参数;生存期参数;服务器地址参数?头部名=头部值  
 
-    ```例如：Sip:55502200@127.0.0.1:5060;User=phone```   
-    
-    ```    Sip:alice@register.com;method=REGISTER  #REGISTER方法是向SIP服务器进行注册的```   
+```html
+例如:Sip:55502200@127.0.0.1:5060;User=phone
+Sip:alice@register.com;method=REGISTER  #REGISTER方法是向SIP服务器进行注册的
+```   
 
 
       > 用户名一般是电话号码，也可以是域名。  
